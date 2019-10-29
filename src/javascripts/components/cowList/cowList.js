@@ -1,10 +1,11 @@
 import './cowList.scss';
-import cows from '../../helpers/data/cows';
+import cowData from '../../helpers/data/cows';
 
 const buildCows = () => {
-  cows.getCows()
+  cowData.getCows()
     .then((response) => {
-      console.log('it worked!', response.data);
+      // could call in a domstring builder function here and pass in response in the parameters
+      console.log('cow array from cowList', response);
     })
     .catch((error) => {
       console.error('shit broke', error);
